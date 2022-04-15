@@ -13,4 +13,7 @@
     <string name="my_account">My Account</string>
     <string name="campaign">Campaign</string>
     <string name="basket">Basket</string>
+
+    <string name="most_selling">Most Selling</string>
+
 </resources>

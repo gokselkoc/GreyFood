@@ -74,5 +74,14 @@
 
         </androidx.recyclerview.widget.RecyclerView>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_60"
+            android:text="@string/most_selling"
+            android:paddingTop="@dimen/padding_30"
+            android:layout_marginHorizontal="@dimen/margin_8"
+            android:textSize="@dimen/text_size_24"
+            android:textColor="@color/textview_text_color"/>
+
     </LinearLayout>
 </layout>
