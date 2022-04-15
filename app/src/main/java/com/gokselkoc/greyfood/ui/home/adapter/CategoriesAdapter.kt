@@ -3,37 +3,37 @@ package com.gokselkoc.greyfood.ui.home.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.gokselkoc.greyfood.databinding.CompanyLogoItemViewBinding
-import com.gokselkoc.greyfood.models.CompanyResponse
-import kotlinx.coroutines.test.withTestContext
+import com.gokselkoc.greyfood.databinding.CategoriesItemViewBinding
+import com.gokselkoc.greyfood.models.CategoriesResponse
 
-class CompaniesAdapter(
+
+class CategoriesAdapter(
     context: Context,
-    private var list : ArrayList<CompanyResponse>
-) : RecyclerView.Adapter<CompaniesAdapter.ViewHolder>()  {
+    private var list : ArrayList<CategoriesResponse>
+) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()  {
 
 
-    fun addToAdapter(newList: ArrayList<CompanyResponse>) {
+    fun addToAdapter(newList: ArrayList<CategoriesResponse>) {
         list.addAll(newList)
         notifyDataSetChanged()
     }
 
     inner class ViewHolder(
-        private val binding: CompanyLogoItemViewBinding,
+        private val binding: CategoriesItemViewBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: CompanyResponse) {
+        fun bind(item: CategoriesResponse) {
             binding.item = item
-            binding.imageView.setImageResource(item.picture)
+            binding.categoriesImageView.setImageResource(item.picture)
             binding.executePendingBindings()
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val binding = CompanyLogoItemViewBinding.inflate(inflater, parent, false)
+        val binding = CategoriesItemViewBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)
     }
 

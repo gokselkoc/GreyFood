@@ -13,6 +13,7 @@
 
     <color name="background_image_start">#a8c0ff</color>
     <color name="background_image_end">#3f2b96</color>
+    <color name="textview_text_color">#575756</color>
 
 
 </resources>

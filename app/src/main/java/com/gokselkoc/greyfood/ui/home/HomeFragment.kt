@@ -6,7 +6,9 @@ import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.base.BaseFragment
 import com.gokselkoc.greyfood.databinding.FragmentHomeBinding
 import com.gokselkoc.greyfood.extension.observe
+import com.gokselkoc.greyfood.models.CategoriesResponse
 import com.gokselkoc.greyfood.models.CompanyResponse
+import com.gokselkoc.greyfood.ui.home.adapter.CategoriesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.CompaniesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.OnboardingAdapter
 
@@ -16,8 +18,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private val viewModel by viewModels<HomeViewModel>()
 
-    val companiesAdapter: CompaniesAdapter by lazy {
+    private val companiesAdapter: CompaniesAdapter by lazy {
         CompaniesAdapter(
+            requireContext(),
+            ArrayList()
+        )
+    }
+
+    private val categoriesAdapter : CategoriesAdapter by lazy {
+        CategoriesAdapter(
+            requireContext(),
             ArrayList()
         )
     }
@@ -31,6 +41,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
         observe(viewModel.companiesResponse,::getCompanies)
         binding.companiesRecyclerView.adapter = companiesAdapter
+        observe(viewModel.categoriesResponse,::getCategories)
+        binding.categoriesRecyclerView.adapter = categoriesAdapter
 
         adapter = OnboardingAdapter(
             childFragmentManager, 4
@@ -58,6 +70,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun getCompanies(data : ArrayList<CompanyResponse>){
         companiesAdapter.addToAdapter(data)
+    }
+
+    private fun getCategories(data : ArrayList<CategoriesResponse>){
+        categoriesAdapter.addToAdapter(data)
     }
 
 }

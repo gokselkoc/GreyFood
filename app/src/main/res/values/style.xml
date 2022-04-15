@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="circleImageViewStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5%</item>
+        <item name="cornerRadius">15dp</item>
+    </style>
+
+
 
     <style name="material_card_view" parent="">
         <item name="cornerFamily">rounded</item>
