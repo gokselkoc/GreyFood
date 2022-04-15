@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.4" />
+        <entry key="..\:/GreyFood/app/src/main/res/drawable/background_image.xml" value="0.1885" />
+        <entry key="..\:/GreyFood/app/src/main/res/drawable/card_view_background.xml" value="0.124" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/activity_main.xml" value="0.2223731884057971" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/company_logo_item_view.xml" value="0.2223731884057971" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/fragment_home.xml" value="0.2223731884057971" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/fragment_onboarding_page.xml" value="0.2223731884057971" />
+        <entry key="app/src/main/res/drawable/card_view_background.xml" value="0.2645" />
+        <entry key="app/src/main/res/drawable/ic_gas_icon.xml" value="0.2965" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2965" />
+        <entry key="app/src/main/res/drawable/ic_person.xml" value="0.2055" />
+        <entry key="app/src/main/res/drawable/ic_shopping.xml" value="0.2055" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3197463768115942" />
+        <entry key="app/src/main/res/layout/fragment_basket.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_campaign.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_give_order.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_my_account.xml" value="0.2776268115942029" />
+        <entry key="app/src/main/res/layout/fragment_onboarding_page.xml" value="0.3197463768115942" />
+        <entry key="app/src/main/res/menu/bottom_menu_nav.xml" value="0.5986328125" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
