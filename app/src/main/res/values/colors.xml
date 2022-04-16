@@ -9,7 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="home_fragment">#B00020</color>
     <color name="dot_color">#009640</color>
-    <color name="white_transparent">#f4f4f4</color>
+    <color name="white_transparent">#66F4F4F4</color>
 
     <color name="background_image_start">#a8c0ff</color>
     <color name="background_image_end">#3f2b96</color>

@@ -8,8 +8,10 @@ import com.gokselkoc.greyfood.databinding.FragmentHomeBinding
 import com.gokselkoc.greyfood.extension.observe
 import com.gokselkoc.greyfood.models.CategoriesResponse
 import com.gokselkoc.greyfood.models.CompanyResponse
+import com.gokselkoc.greyfood.models.MostSellingResponse
 import com.gokselkoc.greyfood.ui.home.adapter.CategoriesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.CompaniesAdapter
+import com.gokselkoc.greyfood.ui.home.adapter.MostSellingAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.OnboardingAdapter
 
 
@@ -32,6 +34,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         )
     }
 
+    private val mostSellingAdapter : MostSellingAdapter by lazy {
+        MostSellingAdapter(
+            requireContext(),
+            ArrayList()
+        )
+    }
+
     private lateinit var adapter: OnboardingAdapter
     var isLastPage: Boolean = false
 
@@ -43,6 +52,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.companiesRecyclerView.adapter = companiesAdapter
         observe(viewModel.categoriesResponse,::getCategories)
         binding.categoriesRecyclerView.adapter = categoriesAdapter
+        observe(viewModel.mostSellingResponse,::getMostSelling)
+        binding.mostSellingRecyclerView.adapter = mostSellingAdapter
 
         adapter = OnboardingAdapter(
             childFragmentManager, 4
@@ -74,6 +85,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private fun getCategories(data : ArrayList<CategoriesResponse>){
         categoriesAdapter.addToAdapter(data)
+    }
+
+    private fun getMostSelling(data :ArrayList<MostSellingResponse>){
+        mostSellingAdapter.addToAdapter(data)
     }
 
 }

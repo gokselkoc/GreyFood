@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.models.CategoriesResponse
 import com.gokselkoc.greyfood.models.CompanyResponse
+import com.gokselkoc.greyfood.models.MostSellingResponse
 
 
 class HomeViewModel() : ViewModel() {
@@ -18,10 +19,14 @@ class HomeViewModel() : ViewModel() {
     private val _categoriesResponse = MutableLiveData<ArrayList<CategoriesResponse>>()
     val categoriesResponse: LiveData<ArrayList<CategoriesResponse>> = _categoriesResponse
 
+    private val _mostSellingResponse = MutableLiveData<ArrayList<MostSellingResponse>>()
+    val mostSellingResponse : LiveData<ArrayList<MostSellingResponse>> = _mostSellingResponse
+
 
     init {
         getCompanies()
         getCategories()
+        getMostSelling()
     }
 
     private fun getCompanies() {
@@ -30,6 +35,10 @@ class HomeViewModel() : ViewModel() {
 
     private fun getCategories(){
         _categoriesResponse.value = getCategoriesList()
+    }
+
+    private fun getMostSelling(){
+        _mostSellingResponse.value = getMostSellingList()
     }
 
 
@@ -54,6 +63,17 @@ class HomeViewModel() : ViewModel() {
             CategoriesResponse("Ice Cream", R.drawable.logo),
             CategoriesResponse("Chocolate", R.drawable.logo),
             CategoriesResponse("Coffee", R.drawable.logo)
+        )
+    }
+
+    private fun getMostSellingList() : ArrayList<MostSellingResponse>{
+        return arrayListOf(
+            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
+            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
+            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
+            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
+            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
+            MostSellingResponse("Nutella Biscuits", R.drawable.background_image)
         )
     }
 }

@@ -3,85 +3,158 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:fillViewport="true">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/background_image"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/viewPager"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_image"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-            <LinearLayout
-                android:id="@+id/dot_card_view"
-                android:layout_width="150dp"
-                android:layout_height="40dp"
-                android:background="@drawable/card_view_background"
-                app:cardBackgroundColor="@color/white_transparent"
-                app:layout_constraintBottom_toBottomOf="@+id/viewPager"
-                app:layout_constraintEnd_toEndOf="@+id/viewPager">
+                <LinearLayout
+                    android:id="@+id/dot_card_view"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/card_view_background"
+                    app:cardBackgroundColor="@color/white_transparent"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewPager"
+                    app:layout_constraintEnd_toEndOf="@+id/viewPager">
 
-                <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
-                    android:id="@+id/dot_indicator"
+                    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                        android:id="@+id/dot_indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_16"
+                        app:dotsColor="@color/dot_color"
+                        app:dotsSize="@dimen/width_10"
+                        app:dotsSpacing="@dimen/margin_6"
+                        app:dotsStrokeColor="@color/black"
+                        app:dotsStrokeWidth="2dp">
+
+                    </com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator>
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/companies_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/company_logo_item_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categories_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="3"
+                tools:listitem="@layout/company_logo_item_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/most_selling_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_60"
+                android:paddingStart="@dimen/padding_16"
+                android:paddingTop="@dimen/padding_35"
+                android:text="@string/most_selling"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/text_size_14" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/most_selling_recycler_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/padding_4"
+                android:paddingEnd="@dimen/padding_4"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/most_selling_item_view">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/blog_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_60">
+
+                <TextView
+                    android:id="@+id/blog_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/margin_16"
-                    android:layout_marginLeft="@dimen/margin_10"
-                    app:dotsColor="@color/dot_color"
-                    app:dotsSize="@dimen/width_10"
-                    app:dotsSpacing="@dimen/margin_6"
-                    app:dotsStrokeColor="@color/black"
-                    app:dotsStrokeWidth="2dp">
+                    android:paddingStart="@dimen/padding_20"
+                    android:paddingTop="@dimen/padding_20"
+                    android:paddingEnd="@dimen/padding_8"
+                    android:text="@string/blog"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                </com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator>
-            </LinearLayout>
+                <TextView
+                    android:id="@+id/all_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/padding_8"
+                    android:paddingTop="@dimen/padding_20"
+                    android:paddingEnd="@dimen/padding_20"
+                    android:text="@string/all"
+                    android:textColor="@color/textview_text_color"
+                    android:textSize="@dimen/text_size_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/blog_image_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_32">
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/banner"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/companies_recycler_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/company_logo_item_view">
+                </com.google.android.material.imageview.ShapeableImageView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </androidx.recyclerview.widget.RecyclerView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/categories_recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:spanCount="3"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            tools:listitem="@layout/company_logo_item_view">
-
-        </androidx.recyclerview.widget.RecyclerView>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/height_60"
-            android:text="@string/most_selling"
-            android:paddingTop="@dimen/padding_30"
-            android:layout_marginHorizontal="@dimen/margin_8"
-            android:textSize="@dimen/text_size_24"
-            android:textColor="@color/textview_text_color"/>
-
-    </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

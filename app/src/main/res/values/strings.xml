@@ -15,5 +15,7 @@
     <string name="basket">Basket</string>
 
     <string name="most_selling">Most Selling</string>
+    <string name="blog">Blog</string>
+    <string name="all">All ></string>
 
 </resources>
