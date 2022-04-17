@@ -5,7 +5,6 @@ import androidx.viewpager.widget.ViewPager
 import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.base.BaseFragment
 import com.gokselkoc.greyfood.databinding.FragmentHomeBinding
-import com.gokselkoc.greyfood.extension.navigateSafe
 import com.gokselkoc.greyfood.extension.observe
 import com.gokselkoc.greyfood.models.CategoriesResponse
 import com.gokselkoc.greyfood.models.CompanyResponse
@@ -44,7 +43,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     var isLastPage: Boolean = false
 
     override fun onFragmentCreate() {
-        observe(viewModel.basketButtonClickedResponse, ::basketButtonClickedNavigation)
     }
 
     override fun FragmentHomeBinding.initialize() {
@@ -99,16 +97,5 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         mostSellingAdapter.addToAdapter(data)
     }
 
-    private fun basketButtonClickedNavigation(isClicked: Boolean) {
-        if (isClicked) {
-            navigateClickedItemFragment(R.id.basket_nav_graph)
-        }
-    }
-
-
-    private fun navigateClickedItemFragment(clickedItem: Int) {
-
-        navigateSafe(resId = clickedItem)
-    }
 
 }

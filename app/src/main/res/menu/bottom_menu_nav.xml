@@ -9,7 +9,7 @@
         android:title="@string/anasayfa"/>
     <item
         android:id="@+id/give_order_nav_graph"
-        android:icon="@drawable/ic_person"
+        android:icon="@drawable/ic_give_order"
         android:title="@string/siparis_ver"/>
     <item
         android:id="@+id/placeholder"
@@ -18,7 +18,7 @@
 
     <item
         android:id="@+id/campaign_nav_graph"
-        android:icon="@drawable/ic_shopping"
+        android:icon="@drawable/ic_campaign"
         android:title="@string/kampanya"/>
     <item
         android:id="@+id/my_account_nav_graph"

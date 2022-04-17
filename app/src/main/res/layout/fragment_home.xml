@@ -66,6 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:background="@color/white"
                 android:paddingHorizontal="@dimen/padding_5"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/company_logo_item_view">
@@ -79,7 +80,7 @@
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                 app:spanCount="3"
-                tools:listitem="@layout/company_logo_item_view">
+                tools:listitem="@layout/categories_item_view">
 
             </androidx.recyclerview.widget.RecyclerView>
 

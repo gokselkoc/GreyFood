@@ -9,8 +9,6 @@
     </style>
 
 
-
-
     <style name="material_card_view" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">50dp</item>

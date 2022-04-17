@@ -31,7 +31,7 @@
                 android:layout_marginTop="@dimen/margin_14"
                 android:layout_marginBottom="@dimen/margin_2"
                 android:background="@color/white"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:src="@drawable/background_image"
                 app:layout_constraintBottom_toTopOf="@+id/most_selling_tv"
                 app:layout_constraintEnd_toEndOf="parent"

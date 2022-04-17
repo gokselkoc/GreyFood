@@ -1,19 +1,13 @@
 package com.gokselkoc.greyfood.ui.home
 
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
 import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.models.CategoriesResponse
 import com.gokselkoc.greyfood.models.CompanyResponse
 import com.gokselkoc.greyfood.models.MostSellingResponse
-import kotlinx.coroutines.flow.MutableSharedFlow
-import kotlinx.coroutines.flow.SharedFlow
-import kotlinx.coroutines.launch
-
 
 class HomeViewModel() : ViewModel() {
 
@@ -27,9 +21,6 @@ class HomeViewModel() : ViewModel() {
     private val _mostSellingResponse = MutableLiveData<ArrayList<MostSellingResponse>>()
     val mostSellingResponse: LiveData<ArrayList<MostSellingResponse>> = _mostSellingResponse
 
-
-    private val _basketButtonClickedResponse = MutableLiveData<Boolean>()
-    val basketButtonClickedResponse: LiveData<Boolean> = _basketButtonClickedResponse
 
 
     init {
@@ -53,42 +44,42 @@ class HomeViewModel() : ViewModel() {
 
     private fun getCompaniesList(): ArrayList<CompanyResponse> {
         return arrayListOf(
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo),
-            CompanyResponse("Capri Sun", R.drawable.logo)
+            CompanyResponse("Hanuta", R.drawable.hanuta),
+            CompanyResponse("Giotto", R.drawable.giotto),
+            CompanyResponse("Ferrero", R.drawable.ic_ferrero_logo),
+            CompanyResponse("Capri Sun", R.drawable.ic_caprisun_logo),
+            CompanyResponse("Nestle", R.drawable.ic_nestle_logo),
+            CompanyResponse("Nutella", R.drawable.ic_nutella_logo),
+            CompanyResponse("Kinder", R.drawable.ic_kinder_logo),
+            CompanyResponse("Pringles", R.drawable.ic_pringles_logo),
+            CompanyResponse("Nigde Gazoz", R.drawable.ic_nigdegazoz_logo),
+            CompanyResponse("Lays", R.drawable.ic_lays_logo),
         )
     }
 
     private fun getCategoriesList(): ArrayList<CategoriesResponse> {
         return arrayListOf(
-            CategoriesResponse("Snack", R.drawable.logo),
-            CategoriesResponse("Beverages", R.drawable.logo),
-            CategoriesResponse("Wafer", R.drawable.logo),
-            CategoriesResponse("Ice Cream", R.drawable.logo),
-            CategoriesResponse("Chocolate", R.drawable.logo),
-            CategoriesResponse("Coffee", R.drawable.logo)
+            CategoriesResponse("Atıştırmalık", R.drawable.snacks),
+            CategoriesResponse("İçecekler", R.drawable.drinks),
+            CategoriesResponse("Gofret", R.drawable.wafer),
+            CategoriesResponse("Dondurma", R.drawable.icecream),
+            CategoriesResponse("Çikolata", R.drawable.chocolate),
+            CategoriesResponse("Kahve", R.drawable.coffee)
         )
     }
 
     private fun getMostSellingList(): ArrayList<MostSellingResponse> {
         return arrayListOf(
-            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
-            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
-            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
-            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
-            MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
-            MostSellingResponse("Nutella Biscuits", R.drawable.background_image)
+            MostSellingResponse("Nutella Biscuits", R.drawable.nutellabiscuits),
+            MostSellingResponse("Scoob", R.drawable.scoobsnacks),
+            MostSellingResponse("Pringles", R.drawable.pringlesmostselling),
+            MostSellingResponse("Milka Oreo Choco", R.drawable.milka),
+            MostSellingResponse("Beyoğlu Gazozu Zencefilli", R.drawable.beyoglugazozu),
+            MostSellingResponse("Fantasia Ice Cream", R.drawable.icecream)
         )
     }
 
 
-    fun onClickedBottomBasketButton(isClicked: Boolean) {
-        _basketButtonClickedResponse.value = isClicked
-    }
+
 }
 

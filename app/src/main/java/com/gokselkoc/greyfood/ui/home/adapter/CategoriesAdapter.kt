@@ -3,13 +3,14 @@ package com.gokselkoc.greyfood.ui.home.adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.gokselkoc.greyfood.databinding.CategoriesItemViewBinding
 import com.gokselkoc.greyfood.models.CategoriesResponse
 
 
 class CategoriesAdapter(
-    context: Context,
+    private val context: Context,
      var list : ArrayList<CategoriesResponse>
 ) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()  {
 

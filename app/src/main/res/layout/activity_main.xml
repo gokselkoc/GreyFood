@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:logo="@drawable/logo"
+            app:logo="@drawable/greyfoodlogo"
             app:logoScaleType="fitStart">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -36,7 +36,7 @@
                     android:layout_width="@dimen/width_30"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/margin_16"
-                    android:src="@drawable/ic_launcher_background"
+                    android:src="@drawable/toolbarlogin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/toolbar_list_image_view"
                     app:layout_constraintTop_toTopOf="parent">
@@ -48,7 +48,7 @@
                     android:layout_width="@dimen/width_30"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/margin_16"
-                    android:src="@drawable/ic_launcher_background"
+                    android:src="@drawable/toolbarlist"
                     app:layout_constraintBottom_toBottomOf="@+id/toolbar_login_image_view"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">

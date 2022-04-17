@@ -29,7 +29,7 @@
                 android:layout_height="@dimen/height_110"
                 android:layout_margin="@dimen/margin_8"
                 android:background="@color/white"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:src="@drawable/banner"
                 app:layout_constraintBottom_toTopOf="@+id/categories_tv"
                 app:layout_constraintEnd_toEndOf="parent"
