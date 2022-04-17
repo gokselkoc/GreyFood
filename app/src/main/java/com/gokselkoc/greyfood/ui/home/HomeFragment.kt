@@ -17,6 +17,7 @@ import com.gokselkoc.greyfood.ui.home.adapter.OnboardingAdapter
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private val viewModel by viewModels<HomeViewModel>()
+    private lateinit var adapter: OnboardingAdapter
 
     private val companiesAdapter: CompaniesAdapter by lazy {
         CompaniesAdapter(
@@ -39,15 +40,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         )
     }
 
-    private lateinit var adapter: OnboardingAdapter
-    var isLastPage: Boolean = false
-
     override fun onFragmentCreate() {
     }
 
     override fun FragmentHomeBinding.initialize() {
-
-        binding.dotCardView
 
         if (companiesAdapter.list.isEmpty() || categoriesAdapter.list.isEmpty() || mostSellingAdapter.list.isEmpty()) {
             observe(viewModel.companiesResponse, ::getCompanies)
@@ -55,6 +51,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
             observe(viewModel.mostSellingResponse, ::getMostSelling)
 
         }
+
         binding.companiesRecyclerView.adapter = companiesAdapter
 
         binding.categoriesRecyclerView.adapter = categoriesAdapter

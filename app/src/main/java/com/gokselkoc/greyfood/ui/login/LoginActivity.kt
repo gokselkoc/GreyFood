@@ -1,4 +1,4 @@
-package com.gokselkoc.greyfood.ui
+package com.gokselkoc.greyfood.ui.login
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.gokselkoc.greyfood.ui
+package com.gokselkoc.greyfood.ui.basket
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

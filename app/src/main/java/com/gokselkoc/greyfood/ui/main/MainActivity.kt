@@ -1,4 +1,4 @@
-package com.gokselkoc.greyfood
+package com.gokselkoc.greyfood.ui.main
 
 
 import android.content.Intent
@@ -8,9 +8,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.databinding.ActivityMainBinding
-import com.gokselkoc.greyfood.ui.BasketActivity
-import com.gokselkoc.greyfood.ui.LoginActivity
+import com.gokselkoc.greyfood.ui.basket.BasketActivity
+import com.gokselkoc.greyfood.ui.login.LoginActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
