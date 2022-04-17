@@ -28,7 +28,7 @@ open class BaseFragment<T : ViewDataBinding>(
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, layoutResId, container, false)
         binding.lifecycleOwner = viewLifecycleOwner
@@ -41,5 +41,5 @@ open class BaseFragment<T : ViewDataBinding>(
         _binding = null
     }
 
-    open fun onFragmentCreate(){}
+    open fun onFragmentCreate() {}
 }

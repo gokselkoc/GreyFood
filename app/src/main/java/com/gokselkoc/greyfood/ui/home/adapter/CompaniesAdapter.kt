@@ -4,21 +4,19 @@ import android.content.Context
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.gokselkoc.greyfood.databinding.CompanyLogoItemViewBinding
 import com.gokselkoc.greyfood.models.CompanyResponse
-import kotlinx.coroutines.test.withTestContext
 
 class CompaniesAdapter(
     context: Context,
-     var list : ArrayList<CompanyResponse>
-) : RecyclerView.Adapter<CompaniesAdapter.ViewHolder>()  {
+    var list: ArrayList<CompanyResponse>,
+) : RecyclerView.Adapter<CompaniesAdapter.ViewHolder>() {
 
 
     fun addToAdapter(newList: ArrayList<CompanyResponse>) {
         list.addAll(newList)
-        Log.e("count",list.size.toString())
+        Log.e("count", list.size.toString())
         notifyDataSetChanged()
     }
 
