@@ -10,14 +10,15 @@
     </data>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="160dp"
-        android:layout_height="200dp"
+        android:id="@+id/most_selling_card_view"
+        android:layout_width="@dimen/width_160"
+        android:layout_height="@dimen/height_200"
         android:layout_marginHorizontal="@dimen/margin_4"
         android:layout_marginVertical="@dimen/margin_16"
-        app:cardCornerRadius="15dp">
+        app:cardCornerRadius="@dimen/radius_15">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/most_selling_card_view"
+            android:id="@+id/most_selling_card_constraint_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -25,13 +26,13 @@
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/most_selling_image_view"
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="@dimen/height_140"
                 android:layout_marginHorizontal="@dimen/margin_12"
                 android:layout_marginTop="@dimen/margin_14"
                 android:layout_marginBottom="@dimen/margin_2"
                 android:background="@color/white"
                 android:scaleType="center"
-                android:src="@drawable/banner"
+                android:src="@drawable/background_image"
                 app:layout_constraintBottom_toTopOf="@+id/most_selling_tv"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +44,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/margin_8"
-                android:layout_marginBottom="24dp"
-                android:text="TESTDENEME"
+                android:layout_marginBottom="@dimen/margin_24"
+                android:text="@{item.name}"
                 android:textColor="@color/textview_text_color"
                 android:textSize="@dimen/text_size_12"
                 app:layout_constraintBottom_toBottomOf="parent"

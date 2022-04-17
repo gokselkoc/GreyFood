@@ -1,11 +1,6 @@
 package com.gokselkoc.greyfood.ui.home
 
-import android.content.Context
-import android.os.Bundle
-import android.util.Log
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.viewpager.widget.ViewPager
 import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.base.BaseFragment
@@ -19,8 +14,6 @@ import com.gokselkoc.greyfood.ui.home.adapter.CategoriesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.CompaniesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.MostSellingAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.OnboardingAdapter
-import kotlinx.coroutines.launch
-
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
@@ -51,7 +44,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     var isLastPage: Boolean = false
 
     override fun onFragmentCreate() {
-        observe(viewModel.basketButtonClickedResponse,::basketButtonClickedNavigation)
+        observe(viewModel.basketButtonClickedResponse, ::basketButtonClickedNavigation)
     }
 
     override fun FragmentHomeBinding.initialize() {
@@ -106,8 +99,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         mostSellingAdapter.addToAdapter(data)
     }
 
-    private fun basketButtonClickedNavigation(isClicked : Boolean){
-        if (isClicked){
+    private fun basketButtonClickedNavigation(isClicked: Boolean) {
+        if (isClicked) {
             navigateClickedItemFragment(R.id.basket_nav_graph)
         }
     }

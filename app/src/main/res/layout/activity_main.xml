@@ -19,37 +19,37 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/main_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="@dimen/height_70"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
             app:logo="@drawable/logo"
             app:logoScaleType="fitStart">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/main_toolbar_constraint"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/appCompatImageView"
+                    android:id="@+id/toolbar_login_image_view"
                     android:layout_width="@dimen/width_30"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/margin_16"
                     android:src="@drawable/ic_launcher_background"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/appCompatImageView2"
+                    app:layout_constraintEnd_toStartOf="@+id/toolbar_list_image_view"
                     app:layout_constraintTop_toTopOf="parent">
 
                 </de.hdodenhof.circleimageview.CircleImageView>
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/appCompatImageView2"
+                    android:id="@+id/toolbar_list_image_view"
                     android:layout_width="@dimen/width_30"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/margin_16"
                     android:src="@drawable/ic_launcher_background"
-                    app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
+                    app:layout_constraintBottom_toBottomOf="@+id/toolbar_login_image_view"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -64,7 +64,7 @@
             android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="-17dp"
+            android:layout_marginBottom="@dimen/margin_minus_17"
             app:defaultNavHost="true"
             app:layout_constraintBottom_toTopOf="@id/bottom_constraint"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,37 +101,36 @@
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="-10dp"
+            android:layout_width="@dimen/width_80"
+            android:layout_height="@dimen/height_80"
+            android:layout_marginBottom="@dimen/margin_minus_10"
             app:cardBackgroundColor="@color/card_view_back_ground_color"
-            app:cardCornerRadius="360dp"
+            app:cardCornerRadius="@dimen/radius_360"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/bottom_constraint"
             app:layout_constraintStart_toStartOf="parent">
 
             <androidx.cardview.widget.CardView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
+                android:layout_width="@dimen/width_70"
+                android:layout_height="@dimen/height_70"
                 android:layout_gravity="center"
                 android:background="@color/white"
-                app:cardCornerRadius="360dp">
+                app:cardCornerRadius="@dimen/radius_360">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/shapeableImageView"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
+                        android:id="@+id/shapeable_image_view"
+                        android:layout_width="@dimen/width_24"
+                        android:layout_height="@dimen/height_24"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/margin_10"
                         android:scaleType="centerCrop"
                         android:src="@drawable/ic_shopping"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,9 +141,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
+                        android:layout_marginBottom="@dimen/margin_10"
                         android:text="@string/sepetim"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/text_size_12"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent" />
@@ -154,8 +153,6 @@
             </androidx.cardview.widget.CardView>
 
         </androidx.cardview.widget.CardView>
-
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

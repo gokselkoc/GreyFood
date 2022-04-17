@@ -2,9 +2,9 @@
     <string name="app_name">GreyFood</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="campaign_fragment">Campaign Fragment</string>
-    <string name="give_order_fragment">Give Order Fragment</string>
-    <string name="my_account_fragment">My Account Fragment</string>
+    <string name="kampanya_fragment">Kampanya Fragment</string>
+    <string name="siparis_ver_fragment">Sipariş Ver Fragment</string>
+    <string name="hesabim_fragment">Hesabım Fragment</string>
     <string name="home_fragment">Home Fragment</string>
     <string name="basket_fragment">Basket Fragment</string>
 
@@ -14,8 +14,9 @@
     <string name="kampanya">Kampanya</string>
     <string name="sepetim">Sepetim</string>
 
-    <string name="most_selling">Most Selling</string>
+    <string name="cok_satanlar">Çok Satanlar</string>
     <string name="blog">Blog</string>
-    <string name="all">All ></string>
+    <string name="tumu">Tümü ></string>
+    <string name="sepetim_activity">Sepetim Activity</string>
 
 </resources>

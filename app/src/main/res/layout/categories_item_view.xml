@@ -1,51 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    
+
     <data>
+
         <variable
             name="item"
             type="com.gokselkoc.greyfood.models.CategoriesResponse" />
     </data>
-<androidx.cardview.widget.CardView
-    android:layout_width="100dp"
-    android:layout_height="160dp"
-    app:cardCornerRadius="15dp"
-    android:layout_marginHorizontal="@dimen/margin_10"
-    android:layout_marginVertical="@dimen/margin_16">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/categories_card_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="@dimen/width_100"
+        android:layout_height="@dimen/height_160"
+        android:layout_marginHorizontal="@dimen/margin_10"
+        android:layout_marginVertical="@dimen/margin_16"
+        app:cardCornerRadius="@dimen/radius_15">
 
-
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/categories_image_view"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/categories_constraint"
             android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:layout_margin="@dimen/margin_8"
-            android:background="@color/white"
-            android:scaleType="center"
-            android:src="@drawable/banner"
-            app:layout_constraintBottom_toTopOf="@+id/categories_tv"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:shapeAppearanceOverlay="@style/circleImageViewStyle" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/categories_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/margin_8"
-            android:layout_marginBottom="@dimen/margin_16"
-            android:text="TESTDENEME"
-            android:textColor="@color/textview_text_color"
-            android:textSize="@dimen/text_size_12"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.cardview.widget.CardView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/categories_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_110"
+                android:layout_margin="@dimen/margin_8"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/banner"
+                app:layout_constraintBottom_toTopOf="@+id/categories_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circleImageViewStyle" />
+
+            <TextView
+                android:id="@+id/categories_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:text="@{item.name}"
+                android:textColor="@color/textview_text_color"
+                android:textSize="@dimen/text_size_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 </layout>

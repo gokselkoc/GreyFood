@@ -25,11 +25,11 @@ class HomeViewModel() : ViewModel() {
     val categoriesResponse: LiveData<ArrayList<CategoriesResponse>> = _categoriesResponse
 
     private val _mostSellingResponse = MutableLiveData<ArrayList<MostSellingResponse>>()
-    val mostSellingResponse : LiveData<ArrayList<MostSellingResponse>> = _mostSellingResponse
+    val mostSellingResponse: LiveData<ArrayList<MostSellingResponse>> = _mostSellingResponse
 
 
     private val _basketButtonClickedResponse = MutableLiveData<Boolean>()
-    val basketButtonClickedResponse : LiveData<Boolean> = _basketButtonClickedResponse
+    val basketButtonClickedResponse: LiveData<Boolean> = _basketButtonClickedResponse
 
 
     init {
@@ -42,25 +42,25 @@ class HomeViewModel() : ViewModel() {
         _companiesResponse.value = getCompaniesList()
     }
 
-    private fun getCategories(){
+    private fun getCategories() {
         _categoriesResponse.value = getCategoriesList()
     }
 
-    private fun getMostSelling(){
+    private fun getMostSelling() {
         _mostSellingResponse.value = getMostSellingList()
     }
 
 
     private fun getCompaniesList(): ArrayList<CompanyResponse> {
         return arrayListOf(
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home),
-            CompanyResponse("Capri Sun", R.drawable.ic_home)
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo),
+            CompanyResponse("Capri Sun", R.drawable.logo)
         )
     }
 
@@ -75,7 +75,7 @@ class HomeViewModel() : ViewModel() {
         )
     }
 
-    private fun getMostSellingList() : ArrayList<MostSellingResponse>{
+    private fun getMostSellingList(): ArrayList<MostSellingResponse> {
         return arrayListOf(
             MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
             MostSellingResponse("Nutella Biscuits", R.drawable.background_image),
@@ -88,7 +88,7 @@ class HomeViewModel() : ViewModel() {
 
 
     fun onClickedBottomBasketButton(isClicked: Boolean) {
-            _basketButtonClickedResponse.value = isClicked
+        _basketButtonClickedResponse.value = isClicked
     }
 }
 
