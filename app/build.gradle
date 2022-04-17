@@ -115,4 +115,7 @@ dependencies {
 
     //Dotindicator
     implementation 'com.tbuonomo:dotsindicator:4.2'
+
+    //Material Design
+    implementation 'com.google.android.material:material:1.6.0-beta01'
 }

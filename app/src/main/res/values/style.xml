@@ -5,6 +5,7 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">5%</item>
         <item name="cornerRadius">15dp</item>
+        <item name="borderRound">10dp</item>
     </style>
 
 

@@ -8,11 +8,11 @@
     <string name="home_fragment">Home Fragment</string>
     <string name="basket_fragment">Basket Fragment</string>
 
-    <string name="home">Home</string>
-    <string name="give_order">Give Order</string>
-    <string name="my_account">My Account</string>
-    <string name="campaign">Campaign</string>
-    <string name="basket">Basket</string>
+    <string name="anasayfa">Anasayfa</string>
+    <string name="siparis_ver">Sipariş Ver</string>
+    <string name="hesabım">Hesabım</string>
+    <string name="kampanya">Kampanya</string>
+    <string name="sepetim">Sepetim</string>
 
     <string name="most_selling">Most Selling</string>
     <string name="blog">Blog</string>

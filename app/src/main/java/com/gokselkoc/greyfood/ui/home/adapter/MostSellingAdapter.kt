@@ -9,8 +9,8 @@ import com.gokselkoc.greyfood.models.MostSellingResponse
 
 class MostSellingAdapter(
     context: Context,
-    private var list : ArrayList<MostSellingResponse>
-) : RecyclerView.Adapter<MostSellingAdapter.ViewHolder>()  {
+    var list: ArrayList<MostSellingResponse>,
+) : RecyclerView.Adapter<MostSellingAdapter.ViewHolder>() {
 
 
     fun addToAdapter(newList: ArrayList<MostSellingResponse>) {

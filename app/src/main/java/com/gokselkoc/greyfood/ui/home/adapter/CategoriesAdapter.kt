@@ -10,7 +10,7 @@ import com.gokselkoc.greyfood.models.CategoriesResponse
 
 class CategoriesAdapter(
     context: Context,
-    private var list : ArrayList<CategoriesResponse>
+     var list : ArrayList<CategoriesResponse>
 ) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()  {
 
 

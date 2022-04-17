@@ -35,26 +35,27 @@
 
                 <LinearLayout
                     android:id="@+id/dot_card_view"
-                    android:layout_width="150dp"
+                    android:layout_width="120dp"
                     android:layout_height="40dp"
                     android:background="@drawable/card_view_background"
                     app:cardBackgroundColor="@color/white_transparent"
                     app:layout_constraintBottom_toBottomOf="@+id/viewPager"
                     app:layout_constraintEnd_toEndOf="@+id/viewPager">
 
-                    <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+                    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
                         android:id="@+id/dot_indicator"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginStart="@dimen/margin_16"
                         android:layout_marginTop="@dimen/margin_16"
-                        app:dotsColor="@color/dot_color"
+                        app:dotsColor="@color/black"
                         app:dotsSize="@dimen/width_10"
                         app:dotsSpacing="@dimen/margin_6"
+                        app:selectedDotColor="@color/dot_color"
                         app:dotsStrokeColor="@color/black"
                         app:dotsStrokeWidth="2dp">
 
-                    </com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator>
+                    </com.tbuonomo.viewpagerdotsindicator.DotsIndicator>
                 </LinearLayout>
 
 

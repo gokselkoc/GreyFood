@@ -15,6 +15,11 @@ open class BaseFragment<T : ViewDataBinding>(
     @LayoutRes private val layoutResId: Int,
 ) : Fragment() {
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        onFragmentCreate()
+    }
+
     private var _binding: T? = null
     val binding: T get() = _binding!!
     val scope: LifecycleCoroutineScope = lifecycleScope
@@ -35,4 +40,6 @@ open class BaseFragment<T : ViewDataBinding>(
         super.onDestroyView()
         _binding = null
     }
+
+    open fun onFragmentCreate(){}
 }

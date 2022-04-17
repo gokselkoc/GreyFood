@@ -6,12 +6,15 @@
         <entry key="../../../../layout/custom_preview.xml" value="0.4" />
         <entry key="..\:/GreyFood/app/src/main/res/drawable/background_image.xml" value="0.1885" />
         <entry key="..\:/GreyFood/app/src/main/res/drawable/card_view_background.xml" value="0.124" />
-        <entry key="..\:/GreyFood/app/src/main/res/layout/activity_main.xml" value="0.2223731884057971" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/activity_basket.xml" value="0.1" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/activity_main.xml" value="0.22509057971014493" />
         <entry key="..\:/GreyFood/app/src/main/res/layout/categories_item_view.xml" value="0.72" />
         <entry key="..\:/GreyFood/app/src/main/res/layout/company_logo_item_view.xml" value="0.2223731884057971" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/fragment_basket.xml" value="0.2223731884057971" />
         <entry key="..\:/GreyFood/app/src/main/res/layout/fragment_home.xml" value="0.264" />
-        <entry key="..\:/GreyFood/app/src/main/res/layout/fragment_onboarding_page.xml" value="0.2223731884057971" />
+        <entry key="..\:/GreyFood/app/src/main/res/layout/fragment_onboarding_page.xml" value="0.117096018735363" />
         <entry key="..\:/GreyFood/app/src/main/res/layout/most_selling_item_view.xml" value="0.72" />
+        <entry key="..\:/GreyFood/app/src/main/res/menu/bottom_menu_nav.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable/card_view_background.xml" value="0.2645" />
         <entry key="app/src/main/res/drawable/ic_gas_icon.xml" value="0.2965" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.2965" />

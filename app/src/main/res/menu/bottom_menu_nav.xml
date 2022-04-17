@@ -2,25 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
+
     <item
         android:id="@+id/home_nav_graph"
         android:icon="@drawable/ic_home"
-        android:title="@string/home"/>
+        android:title="@string/anasayfa"/>
     <item
         android:id="@+id/give_order_nav_graph"
         android:icon="@drawable/ic_person"
-        android:title="@string/give_order"/>
+        android:title="@string/siparis_ver"/>
     <item
-        android:id="@+id/basket_nav_graph"
-        android:icon="@drawable/ic_shopping"
-        android:title="@string/basket"/>
+        android:id="@+id/placeholder"
+        android:title=""
+        android:enabled="false"/>
 
     <item
         android:id="@+id/campaign_nav_graph"
         android:icon="@drawable/ic_shopping"
-        android:title="@string/campaign"/>
+        android:title="@string/kampanya"/>
     <item
         android:id="@+id/my_account_nav_graph"
         android:icon="@drawable/ic_person"
-        android:title="@string/my_account"/>
+        android:title="@string/hesabım"/>
 </menu>
