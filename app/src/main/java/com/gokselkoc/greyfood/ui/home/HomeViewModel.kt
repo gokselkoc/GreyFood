@@ -70,12 +70,12 @@ class HomeViewModel() : ViewModel() {
 
     private fun getMostSellingList(): ArrayList<MostSellingResponse> {
         return arrayListOf(
-            MostSellingResponse("Nutella Biscuits", R.drawable.nutellabiscuits),
+            MostSellingResponse("Nutella Bisküvi", R.drawable.nutellabiscuits),
             MostSellingResponse("Scoob", R.drawable.scoobsnacks),
             MostSellingResponse("Pringles", R.drawable.pringlesmostselling),
             MostSellingResponse("Milka Oreo Choco", R.drawable.milka),
             MostSellingResponse("Beyoğlu Gazozu Zencefilli", R.drawable.beyoglugazozu),
-            MostSellingResponse("Fantasia Ice Cream", R.drawable.icecream)
+            MostSellingResponse("Fantasia Dondurma", R.drawable.icecream)
         )
     }
 

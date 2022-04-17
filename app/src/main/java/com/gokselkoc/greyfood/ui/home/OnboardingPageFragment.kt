@@ -37,10 +37,10 @@ class OnboardingPageFragment : Fragment() {
             binding.imageView.apply {
                 setImageResource(
                     when (position) {
-                        0 -> R.drawable.ic_home
-                        1 -> R.drawable.ic_person
-                        2 -> R.drawable.ic_shopping
-                        3 -> R.drawable.ic_person
+                        0 -> R.drawable.slidercips
+                        1 -> R.drawable.slider_drink
+                        2 -> R.drawable.slider_ice_cream
+                        3 -> R.drawable.slider_chocolate
 
                         else -> {
                             throw Exception()
