@@ -33,9 +33,9 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/toolbar_login_image_view"
-                    android:layout_width="@dimen/width_30"
+                    android:layout_width="@dimen/width_40"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_10"
                     android:src="@drawable/toolbarlogin"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/toolbar_list_image_view"
@@ -45,7 +45,7 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/toolbar_list_image_view"
-                    android:layout_width="@dimen/width_30"
+                    android:layout_width="@dimen/width_40"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/margin_16"
                     android:src="@drawable/toolbarlist"
