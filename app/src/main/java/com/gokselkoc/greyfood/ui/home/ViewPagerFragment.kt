@@ -10,7 +10,7 @@ import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.databinding.FragmentOnboardingPageBinding
 
 
-class OnboardingPageFragment : Fragment() {
+class ViewPagerFragment : Fragment() {
 
     private lateinit var binding: FragmentOnboardingPageBinding
 
@@ -52,8 +52,8 @@ class OnboardingPageFragment : Fragment() {
 
     companion object {
         private const val ARG_POSITION = "arg_position"
-        fun newInstance(position: Int): OnboardingPageFragment {
-            return OnboardingPageFragment()
+        fun newInstance(position: Int): ViewPagerFragment {
+            return ViewPagerFragment()
                 .apply {
                     arguments = Bundle().apply {
                         putInt(ARG_POSITION, position)

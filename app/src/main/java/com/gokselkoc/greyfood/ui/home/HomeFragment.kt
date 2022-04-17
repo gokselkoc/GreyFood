@@ -12,12 +12,12 @@ import com.gokselkoc.greyfood.models.MostSellingResponse
 import com.gokselkoc.greyfood.ui.home.adapter.CategoriesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.CompaniesAdapter
 import com.gokselkoc.greyfood.ui.home.adapter.MostSellingAdapter
-import com.gokselkoc.greyfood.ui.home.adapter.OnboardingAdapter
+import com.gokselkoc.greyfood.ui.home.adapter.ViewPagerAdapter
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private val viewModel by viewModels<HomeViewModel>()
-    private lateinit var adapter: OnboardingAdapter
+    private lateinit var adapter: ViewPagerAdapter
 
     private val companiesAdapter: CompaniesAdapter by lazy {
         CompaniesAdapter(
@@ -58,7 +58,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
         binding.mostSellingRecyclerView.adapter = mostSellingAdapter
 
-        adapter = OnboardingAdapter(
+        adapter = ViewPagerAdapter(
             childFragmentManager, 4
         )
 
