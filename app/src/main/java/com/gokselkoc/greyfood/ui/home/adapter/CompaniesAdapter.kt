@@ -1,7 +1,5 @@
 package com.gokselkoc.greyfood.ui.home.adapter
 
-import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,14 +7,12 @@ import com.gokselkoc.greyfood.databinding.CompanyLogoItemViewBinding
 import com.gokselkoc.greyfood.models.CompanyResponse
 
 class CompaniesAdapter(
-    context: Context,
     var list: ArrayList<CompanyResponse>,
 ) : RecyclerView.Adapter<CompaniesAdapter.ViewHolder>() {
 
 
     fun addToAdapter(newList: ArrayList<CompanyResponse>) {
         list.addAll(newList)
-        Log.e("count", list.size.toString())
         notifyDataSetChanged()
     }
 

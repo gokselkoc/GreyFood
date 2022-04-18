@@ -21,21 +21,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
     private val companiesAdapter: CompaniesAdapter by lazy {
         CompaniesAdapter(
-            requireContext(),
             ArrayList()
         )
     }
 
     private val categoriesAdapter: CategoriesAdapter by lazy {
         CategoriesAdapter(
-            requireContext(),
             ArrayList()
         )
     }
 
     private val mostSellingAdapter: MostSellingAdapter by lazy {
         MostSellingAdapter(
-            requireContext(),
             ArrayList()
         )
     }

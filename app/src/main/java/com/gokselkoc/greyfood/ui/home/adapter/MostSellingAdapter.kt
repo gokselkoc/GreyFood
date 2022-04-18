@@ -1,6 +1,5 @@
 package com.gokselkoc.greyfood.ui.home.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +7,6 @@ import com.gokselkoc.greyfood.databinding.MostSellingItemViewBinding
 import com.gokselkoc.greyfood.models.MostSellingResponse
 
 class MostSellingAdapter(
-    context: Context,
     var list: ArrayList<MostSellingResponse>,
 ) : RecyclerView.Adapter<MostSellingAdapter.ViewHolder>() {
 

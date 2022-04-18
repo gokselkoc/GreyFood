@@ -1,18 +1,14 @@
 package com.gokselkoc.greyfood.ui.home.adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.gokselkoc.greyfood.databinding.CategoriesItemViewBinding
 import com.gokselkoc.greyfood.models.CategoriesResponse
 
-
 class CategoriesAdapter(
-    private val context: Context,
-     var list : ArrayList<CategoriesResponse>
-) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>()  {
+    var list: ArrayList<CategoriesResponse>,
+) : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
 
 
     fun addToAdapter(newList: ArrayList<CategoriesResponse>) {
@@ -29,7 +25,6 @@ class CategoriesAdapter(
             binding.categoriesImageView.setImageResource(item.picture)
             binding.executePendingBindings()
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

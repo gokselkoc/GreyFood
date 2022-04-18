@@ -1,6 +1,6 @@
 package com.gokselkoc.greyfood.models
 
-class CategoriesResponse(
+data class CategoriesResponse(
     val name: String,
     val picture: Int,
 )
