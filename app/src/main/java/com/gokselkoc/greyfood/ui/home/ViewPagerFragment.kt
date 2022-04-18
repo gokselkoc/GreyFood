@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.gokselkoc.greyfood.R
-import com.gokselkoc.greyfood.databinding.FragmentOnboardingPageBinding
+import com.gokselkoc.greyfood.databinding.FragmentViewpagerBinding
 
 
 class ViewPagerFragment : Fragment() {
 
-    private lateinit var binding: FragmentOnboardingPageBinding
+    private lateinit var binding: FragmentViewpagerBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,7 +21,7 @@ class ViewPagerFragment : Fragment() {
     ): View {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_onboarding_page,
+            R.layout.fragment_viewpager,
             container,
             false
         )
