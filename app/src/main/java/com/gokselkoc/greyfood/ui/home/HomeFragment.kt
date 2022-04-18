@@ -43,10 +43,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     override fun FragmentHomeBinding.initialize() {
 
         if (companiesAdapter.list.isEmpty() || categoriesAdapter.list.isEmpty() || mostSellingAdapter.list.isEmpty()) {
+
             observe(viewModel.companiesResponse, ::getCompanies)
             observe(viewModel.categoriesResponse, ::getCategories)
             observe(viewModel.mostSellingResponse, ::getMostSelling)
-
         }
 
         binding.companiesRecyclerView.adapter = companiesAdapter
@@ -63,6 +63,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
         binding.dotIndicator.setViewPager(binding.viewPager)
 
         binding.viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+
             override fun onPageScrollStateChanged(state: Int) {}
 
             override fun onPageScrolled(
@@ -76,7 +77,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
 
             }
         })
-
     }
 
     private fun getCompanies(data: ArrayList<CompanyResponse>) {
@@ -90,6 +90,5 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(R.layout.fragment_home) {
     private fun getMostSelling(data: ArrayList<MostSellingResponse>) {
         mostSellingAdapter.addToAdapter(data)
     }
-
 
 }

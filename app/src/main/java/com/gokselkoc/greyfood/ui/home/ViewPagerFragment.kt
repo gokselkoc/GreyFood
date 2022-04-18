@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import com.gokselkoc.greyfood.R
 import com.gokselkoc.greyfood.databinding.FragmentViewpagerBinding
 
-
 class ViewPagerFragment : Fragment() {
 
     private lateinit var binding: FragmentViewpagerBinding
@@ -17,7 +16,7 @@ class ViewPagerFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         binding = DataBindingUtil.inflate(
             inflater,
@@ -32,21 +31,19 @@ class ViewPagerFragment : Fragment() {
 
     private fun initLayout(position: Int) {
 
+        binding.imageView.apply {
+            setImageResource(
+                when (position) {
+                    0 -> R.drawable.slidercips
+                    1 -> R.drawable.slider_drink
+                    2 -> R.drawable.slider_ice_cream
+                    3 -> R.drawable.slider_chocolate
 
-
-            binding.imageView.apply {
-                setImageResource(
-                    when (position) {
-                        0 -> R.drawable.slidercips
-                        1 -> R.drawable.slider_drink
-                        2 -> R.drawable.slider_ice_cream
-                        3 -> R.drawable.slider_chocolate
-
-                        else -> {
-                            throw Exception()
-                        }
+                    else -> {
+                        throw Exception()
                     }
-                )
+                }
+            )
         }
     }
 
@@ -61,6 +58,4 @@ class ViewPagerFragment : Fragment() {
                 }
         }
     }
-
-
 }

@@ -1,6 +1,5 @@
 package com.gokselkoc.greyfood.ui.home
 
-
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,7 +10,6 @@ import com.gokselkoc.greyfood.models.MostSellingResponse
 
 class HomeViewModel() : ViewModel() {
 
-
     private val _companiesResponse = MutableLiveData<ArrayList<CompanyResponse>>()
     val companiesResponse: LiveData<ArrayList<CompanyResponse>> = _companiesResponse
 
@@ -20,7 +18,6 @@ class HomeViewModel() : ViewModel() {
 
     private val _mostSellingResponse = MutableLiveData<ArrayList<MostSellingResponse>>()
     val mostSellingResponse: LiveData<ArrayList<MostSellingResponse>> = _mostSellingResponse
-
 
 
     init {
@@ -78,8 +75,5 @@ class HomeViewModel() : ViewModel() {
             MostSellingResponse("Fantasia Dondurma", R.drawable.icecream)
         )
     }
-
-
-
 }
 
